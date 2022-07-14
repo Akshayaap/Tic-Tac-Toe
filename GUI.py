@@ -1,5 +1,4 @@
 
-import re
 from tkinter import *
 from tkinter import messagebox
 from Game import *
