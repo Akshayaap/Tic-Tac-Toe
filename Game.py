@@ -159,13 +159,13 @@ class Game():
             #print(self.cross.states[self.trace[i]]['next'])
             if t == -1:
                 tmp=self.cross.states[self.trace[i]]['next']
-                tmp[self.trace[i+1]]-=1
+                tmp[self.trace[i+1]]-=100
                 i+=1
                 t=1
             else:
                 tmp=self.naught.states[self.trace[i]]['next']
                 try:
-                    tmp[self.trace[i+1]]+=1
+                    tmp[self.trace[i+1]]+=100
                 except KeyError:
                     self.noerr+=1
                     print('*************Errors Occured in Naught:{}************'.format(self.noerr))
@@ -182,13 +182,13 @@ class Game():
             #print(self.cross.states[self.trace[i]]['next'])
             if t == 1:
                 tmp=self.naught.states[self.trace[i]]['next']
-                tmp[self.trace[i+1]]-=1
+                tmp[self.trace[i+1]]-=100
                 i+=1
                 t=-1
             else:
                 tmp=self.cross.states[self.trace[i]]['next']
                 try:
-                    tmp[self.trace[i+1]]+=1
+                    tmp[self.trace[i+1]]+=100
                 except KeyError:
                     self.noerr+=1
                     print('*************Errors Occured in Cross:{}************'.format(self.noerr))
